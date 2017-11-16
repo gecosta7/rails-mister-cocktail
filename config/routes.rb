@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
 end
 delete "doses/:id", to:"doses#destroy"
+root 'cocktails#index'
 end
 
