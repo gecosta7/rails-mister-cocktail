@@ -1,7 +1,15 @@
 class Cocktail < ApplicationRecord
-has_many :doses, dependent: :destroy
-has_many :ingredients, through: :doses
-validates :name, uniqueness: true
-validates :name, presence: true
+  has_many :doses, dependent: :destroy
+  has_many :ingredients, through: :doses
+  validates :name, uniqueness: true
+  validates :name, presence: true
+  mount_uploader :photo, PhotoUploader
 
+  def safe_photo
+    if photo.present?
+      return photo
+    else
+      return ""
+    end
+  end
 end

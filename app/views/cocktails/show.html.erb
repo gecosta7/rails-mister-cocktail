@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -12,3 +13,9 @@
 <% @cocktail.doses.each do |dose| %>
 <p><%= dose.description %> <%= dose.ingredient.name %></p>
 <% end %>
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
+
+</div>
+

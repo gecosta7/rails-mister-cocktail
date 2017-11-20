@@ -9,3 +9,7 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "cachaça")
+url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+product = Product.new(name: 'NES')
+product.remote_photo_url = url
+product.save
